@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zerno — Local Third Wave Coffee Shop</title>
+  <meta name="description" content="Zerno is a local third wave coffee shop: single-origin beans, fresh roast, pre-order for pickup.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <input type="checkbox" id="theme-toggle" class="visually-hidden">
+
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="Zerno, back to top">Zerno</a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <input type="checkbox" id="menu-toggle" class="visually-hidden">
+      <label for="menu-toggle" class="burger">Menu</label>
+      <ul class="nav-links">
+        <li><a href="#beans">Beans</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#addresses">Addresses</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Fresh Roast. Honest Taste</h1>
+      <p>Small batches, roasted every morning in our own shop. Order ahead and pick it up warm.</p>
+      <a class="cta" href="#menu">See the menu</a>
+    </section>
+
+    <section id="beans" class="section" aria-labelledby="beans-title">
+      <h2 id="beans-title">Single-origin beans</h2>
+      <p class="lead">One farm, one harvest, one cup. Every coffee here is traced back to where it grew.</p>
+
+      <ul class="cards">
+        <li>
+          <article class="card">
+            <h3>Yirgacheffe</h3>
+            <dl>
+              <dt>Country of origin</dt>
+              <dd>Ethiopia</dd>
+              <dt>Plantation altitude</dt>
+              <dd>1900–2200 m</dd>
+              <dt>Flavor profile</dt>
+              <dd>Jasmine, bergamot, peach</dd>
+            </dl>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h3>Huila</h3>
+            <dl>
+              <dt>Country of origin</dt>
+              <dd>Colombia</dd>
+              <dt>Plantation altitude</dt>
+              <dd>1700–1900 m</dd>
+              <dt>Flavor profile</dt>
+              <dd>Red apple, caramel, cocoa</dd>
+            </dl>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h3>Nyeri</h3>
+            <dl>
+              <dt>Country of origin</dt>
+              <dd>Kenya</dd>
+              <dt>Plantation altitude</dt>
+              <dd>1700–1800 m</dd>
+              <dt>Flavor profile</dt>
+              <dd>Blackcurrant, grapefruit, brown sugar</dd>
+            </dl>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h3>Antigua</h3>
+            <dl>
+              <dt>Country of origin</dt>
+              <dd>Guatemala</dd>
+              <dt>Plantation altitude</dt>
+              <dd>1500–1700 m</dd>
+              <dt>Flavor profile</dt>
+              <dd>Milk chocolate, orange, almond</dd>
+            </dl>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section id="menu" class="section" aria-labelledby="menu-title">
+      <h2 id="menu-title">Pre-order for pickup</h2>
+      <p class="lead">Choose your coffee, set a pickup time, and we will have it ready at the counter.</p>
+
+      <form class="order-form" action="#" method="post">
+        <fieldset>
+          <legend>Your order</legend>
+
+          <label for="coffee">Coffee</label>
+          <select id="coffee" name="coffee" required>
+            <option value="" selected disabled>Select a coffee</option>
+            <option value="yirgacheffe">Yirgacheffe, Ethiopia</option>
+            <option value="huila">Huila, Colombia</option>
+            <option value="nyeri">Nyeri, Kenya</option>
+            <option value="antigua">Antigua, Guatemala</option>
+          </select>
+
+          <label for="method">Brew method</label>
+          <select id="method" name="method" required>
+            <option value="" selected disabled>Select a method</option>
+            <option value="espresso">Espresso</option>
+            <option value="filter">Filter (V60)</option>
+            <option value="beans">Whole beans, 250 g</option>
+          </select>
+
+          <label for="qty">Quantity</label>
+          <input type="number" id="qty" name="qty" min="1" max="10" value="1" required>
+
+          <label for="pickup">Pickup Time</label>
+          <input type="time" id="pickup" name="pickup" min="08:00" max="20:00" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contact details</legend>
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required minlength="2">
+
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="+7 700 000 0000" autocomplete="tel" required pattern="[+]?[0-9 ()\-]{7,18}">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+        </fieldset>
+
+        <button type="submit" class="cta">Place pre-order</button>
+      </form>
+    </section>
+
+    <section id="addresses" class="section" aria-labelledby="addresses-title">
+      <h2 id="addresses-title">Addresses</h2>
+      <ul class="cards cards-wide">
+        <li>
+          <article class="card">
+            <h3>Zerno Roastery</h3>
+            <address>12 Abay Avenue<br>Almaty</address>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h3>Zerno Corner</h3>
+            <address>5 Dostyk Street<br>Almaty</address>
+          </article>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <section class="footer-block" aria-labelledby="hours-title">
+      <h2 id="hours-title">Opening hours</h2>
+      <p>Mon–Fri: 08:00–20:00</p>
+      <p>Sat–Sun: 09:00–21:00</p>
+    </section>
+
+    <nav class="footer-block" aria-labelledby="links-title">
+      <h2 id="links-title">Explore</h2>
+      <ul>
+        <li><a href="#beans">Beans</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#addresses">Addresses</a></li>
+      </ul>
+    </nav>
+
+    <section class="footer-block" aria-labelledby="social-title">
+      <h2 id="social-title">Follow us</h2>
+      <ul>
+        <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://t.me" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></li>
+      </ul>
+    </section>
+
+    <section class="footer-block" aria-labelledby="theme-title">
+      <h2 id="theme-title">Appearance</h2>
+      <label for="theme-toggle" class="theme-button">
+        <span class="to-dark">Switch to dark roast theme</span>
+        <span class="to-light">Switch to light theme</span>
+      </label>
+    </section>
+
+    <p class="legal">© 2026 Zerno Coffee LLP. All rights reserved. Prices include VAT. Student project for ICT6001.</p>
+  </footer>
+</body>
+</html>
